@@ -1,12 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modcord - Main</title>
+    <title>Document</title>
 </head>
+
 <body>
-    <span>Hello World</span>
-</body>
-</html>
+    <strong>Token</strong>
+    <br><br>
+    <a id="usertoken" class="input"></a>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+        * {
+            margin: 3px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1d1e20;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #555555;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555555;
+        }
+
+        a:link,
+        a:visited {
+            color: #FFF;
+        }
+
+        body {
+            color: #FFF;
+            text-align: center;
+            background-color: #1d1e20;
+            font-family: 'Open Sans', sans-serif;
+            user-select: none;
+            width: 100%;
+            height: 1%;
+        }
+
+        .input {
+            display: inline;
+            width: 40%;
+            align-items: center;
+            text-align: center;
+            height: 34px;
+            padding: 6px 42px;
+            font-size: 16px;
+            color: rgb(38, 255, 0);
+            background-color: rgb(29, 29, 29);
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 4px;
+            user-select: all
+        }
+    </style>
+    <script>
+        const text1 = document.getElementById("usertoken");
+        let token = document.URL.split("#access_token=")[1].split("&scope")[0]
+        text1.innerText = token
+    </script>
+    
+    </html>
+
+
+
+
+<!-- https://id.twitch.tv/oauth2/authorize?response_type=token&client_id=a9p51y55dnvfehl2tz2kyloiwvtmnz&redirect_uri=https://modcrod.github.io/verify/&scope= -->
